@@ -1,0 +1,22 @@
+=== univariate: y = 2 + 3x + noise (train 90 / test 30) ===
+ground truth beta   : [+2.0000, +3.0000]
+normal equation     : [+1.9804, +2.9932]  (path: solve)
+gradient descent    : [+1.9804, +2.9932]  (2 iters, converged: True)
+max |beta - truth|  : NE 0.0196   GD 0.0196
+final train cost J  : NE 1.221784   GD 1.221784
+test RMSE / R^2     : NE 1.3474 / 0.9707   GD 1.3474 / 0.9707
+wall time           : NE 0.12 ms   GD 0.39 ms
+GD diagnostics      : alpha = 1/L = 1.0000 (L = 1.000), standardised Hessian condition number 1.0
+cross-checks        : ||X^T X beta_NE - X^T y|| = 2.313e-12;  max |beta_GD - beta_NE| = 4.996e-14
+=== multivariate: price ~ size + rooms + age (synthetic) (train 180 / test 60) ===
+ground truth beta   : [+50.0000, +2.5000, +8.0000, -1.2000]
+normal equation     : [+49.9007, +2.4972, +7.9424, -1.1901]  (path: solve)
+gradient descent    : [+49.9008, +2.4972, +7.9425, -1.1901]  (471 iters, converged: True)
+max |beta - truth|  : NE 0.0993   GD 0.0992
+final train cost J  : NE 72.292271   GD 72.292271
+test RMSE / R^2     : NE 9.2746 / 0.9953   GD 9.2746 / 0.9953
+wall time           : NE 0.04 ms   GD 10.26 ms
+GD diagnostics      : alpha = 1/L = 0.5134 (L = 1.948), standardised Hessian condition number 37.4
+cross-checks        : ||X^T X beta_NE - X^T y|| = 1.778e-09;  max |beta_GD - beta_NE| = 9.168e-05
+wrote examples/dataset.csv
+wrote examples/fit_and_cost.png
